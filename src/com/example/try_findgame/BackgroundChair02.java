@@ -6,7 +6,6 @@ import android.graphics.Point;
 import android.graphics.PointF;
 
 import com.example.try_gameengine.framework.CommonUtil;
-import com.example.try_gameengine.framework.LayerManager;
 import com.example.try_gameengine.framework.Sprite;
 
 public class BackgroundChair02 extends BackgroundObject{
@@ -15,8 +14,7 @@ public class BackgroundChair02 extends BackgroundObject{
 	Context context;
 	public BackgroundChair02(Context context) {
 		super(BitmapUtil.chair02_1, BitmapUtil.chair02_1.getWidth(), BitmapUtil.chair02_1.getHeight(), false);
-//		addWithLayerLevelIncrease(this, 2);
-		LayerManager.getInstance().addLayerByLayerLevel(this, 2);
+		addWithLayerLevelIncrease(this, 2);
 		// TODO Auto-generated constructor stub
 		this.context = context;
 		xx = MyMap.setImageXYByOldXY(100, 100).x;
@@ -52,9 +50,12 @@ public class BackgroundChair02 extends BackgroundObject{
 		Sprite markPartLayer3 = new BackgroundObject(BitmapUtil.chair02_4, MyMap.getWH(56, 197).x, MyMap.getWH(56, 197).y, false);
 		markPartLayer3.setPosition(pointF.x+xx, pointF.y+yy);
 		
-//		LayerManager.insertLayer(b, this);
-		addWithLayerLevelIncrease(markPartLayer, 2);
-		addWithLayerLevelIncrease(markPartLayer2, 4);
-		addWithLayerLevelIncrease(markPartLayer3, 2);
+//		addWithLayerLevelIncrease(markPartLayer, 2);
+//		addWithLayerLevelIncrease(markPartLayer2, 4);
+//		addWithLayerLevelIncrease(markPartLayer3, 2);
+		
+		addWithLayerLevel(markPartLayer, 2);
+		addWithLayerLevel(markPartLayer2, 4);
+		addWithLayerLevel(markPartLayer3, 2);
 	}
 }

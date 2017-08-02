@@ -20,6 +20,9 @@ public class MyGameModel extends com.example.try_gameengine.framework.GameModel 
 		}else if(level==2){
 			BackgroundObject backgroundObject = new BackgroundChair03(context);
 			HideObject hideObject = new HideLemon(context);
+			HideObject hideObject2 = new HideOrange(context);
+			HideObject hideObject3 = new HideGrapes(context);
+			HideObject hideObject4 = new HideWatermelon(context);
 		}
 		
 	}
@@ -57,7 +60,7 @@ public class MyGameModel extends com.example.try_gameengine.framework.GameModel 
 		Paint paint = new Paint();
 		paint.setColor(Color.BLUE);
 //		canvas.drawColor(Color.WHITE);
-		LayerManager.getInstance().drawLayers(canvas, paint);
+		LayerManager.drawLayers(canvas, paint);
 	}
 
 	@Override

@@ -142,6 +142,7 @@ public class BackgroundChair03 extends BackgroundObject{
 		Sprite markPartLayer = new BackgroundObject(bitmap, MyMap.getWH(w, h).x, MyMap.getWH(w, h).y, false);
 		markPartLayer.setPosition(pointF.x+xx, pointF.y+yy);
 		
-		addWithLayerLevelIncrease(markPartLayer, layer);
+//		addWithLayerLevelIncrease(markPartLayer, layer);
+		addWithLayerLevel(markPartLayer, layer);
 	}
 }

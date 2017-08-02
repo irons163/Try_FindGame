@@ -5,9 +5,14 @@ import android.content.Context;
 import android.telephony.gsm.GsmCellLocation;
 
 import com.example.try_gameengine.framework.IGameController;
+import com.example.try_gameengine.IGameModel;
 import com.example.try_gameengine.scene.Scene;
 
+
 public class MyScene extends Scene{
+
+	
+	
 	public MyScene(Context context, String id, int level) {
 		super(context, id, level);
 		// TODO Auto-generated constructor stub
@@ -17,7 +22,7 @@ public class MyScene extends Scene{
 	@Override
 	public void initGameModel() {
 		// TODO Auto-generated method stub
-		gameModel = (com.example.try_gameengine.framework.IGameModel) new MyGameModel(context, null, getLayerLevel());
+		gameModel = (com.example.try_gameengine.framework.IGameModel) new MyGameModel(context, null, level);
 	}
 
 	@Override

@@ -6,18 +6,18 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.PointF;
 
-public class HideOrange extends HideObject{
+public class HideWatermelon extends HideObject{
 	float xx;
 	float yy;
 	Context context;
 	
-	public HideOrange(Context context) {
-		super(BitmapUtil.orange, BitmapUtil.orange.getWidth(), BitmapUtil.orange.getHeight(), false);
+	public HideWatermelon(Context context) {
+		super(BitmapUtil.watermelon, BitmapUtil.watermelon.getWidth(), BitmapUtil.watermelon.getHeight(), false);
 		// TODO Auto-generated constructor stub
 		this.context = context;
-		xx = MyMap.setImageXYByOldXY(100, 100).x;
-		yy = MyMap.setImageXYByOldXY(100, 100).y;
-		setPosition(MyMap.setImageXYByOldXY(100, 100).x, MyMap.setImageXYByOldXY(100, 100).y);
+		xx = MyMap.setImageXYByOldXY(25, 210).x;
+		yy = MyMap.setImageXYByOldXY(25, 210).y;
+		setPosition(MyMap.setImageXYByOldXY(25, 210).x, MyMap.setImageXYByOldXY(25, 210).y);
 //		addWithLayerLevelIncrease(this, 1);
 		createObjectLayerList();
 	}
@@ -25,7 +25,7 @@ public class HideOrange extends HideObject{
 	protected void createObjectLayerList(){
 		String s = FileUtil.readFileFromAssets(context, "111.txt");
 
-		ImageInfo imageInfo = FileUtil.getImageInfo(s, "orange", "orange");
+		ImageInfo imageInfo = FileUtil.getImageInfo(s, "watermelon", "watermelon");
 		int x = imageInfo.getX();
 		int y = imageInfo.getY();
 		int w = imageInfo.getW();
@@ -34,11 +34,11 @@ public class HideOrange extends HideObject{
 
 		addWithLayerLevelIncrease(this, layer);
 		
-		MyMap.setInfo(w, h, BitmapUtil.orange.getWidth(), BitmapUtil.orange.getHeight());
+		MyMap.setInfo(w, h, BitmapUtil.watermelon.getWidth(), BitmapUtil.watermelon.getHeight());
 		
-		String object = "orange";
-		String[] parts = new String[]{"orange"};
-		Bitmap[] partBitmaps = new Bitmap[]{BitmapUtil.orange};
+		String object = "watermelon";
+		String[] parts = new String[]{"watermelon"};
+		Bitmap[] partBitmaps = new Bitmap[]{BitmapUtil.watermelon};
 //		for(int i = 0; i<partBitmaps.length; i++){
 //			setPartLayer(s, object, parts[i], partBitmaps[i]);
 //		}

@@ -1,7 +1,6 @@
 package com.example.try_findgame;
 
 import com.example.try_gameengine.framework.CommonUtil;
-import com.example.try_gameengine.framework.Config;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -23,10 +22,6 @@ public class MainActivity extends Activity {
 		
 		CommonUtil.screenHeight = dm.heightPixels;
 		CommonUtil.screenWidth = dm.widthPixels;
-		Config.currentScreenHeight = CommonUtil.screenHeight;
-		Config.currentScreenWidth = CommonUtil.screenWidth;
-		Config.defaultScreenHeight = 800;
-		Config.defaultScreenWidth = 480;
 		BitmapUtil.initBitmap(this);
 		MyMap.totalX = 480;
 		MyMap.totalY = 800;
